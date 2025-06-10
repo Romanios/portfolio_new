@@ -1,0 +1,49 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  font-family: var(--font-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
+}
+
+.container {
+  // max-width: 1340px;
+  width: 100%;
+  // padding: 0 20px;
+  margin: 0 auto;
+}
+
+.common-title {
+  margin-bottom: 40px;
+  font-family: var(--font-title);
+  color: var(--header);
+  text-transform: capitalize;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.16;
+}
+
+.main-descr {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+.no-center {
+  margin-left: 0;
+  margin-right: 0;
+}

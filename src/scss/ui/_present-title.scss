@@ -1,0 +1,26 @@
+
+.present {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  &__inner {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent);
+    padding: 8px 24px;
+    border: 1px solid var(--accent);
+    border-radius: 100px;
+  }
+  &__inner.no-center {
+    margin-left: 0;
+    margin-right: 0;
+  }
+    &__img {
+    width: 24px;
+    height: 24px;
+  }
+  &__title {
+  }
+}
