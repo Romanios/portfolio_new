@@ -17,6 +17,20 @@
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
   }
+
+  &__inner {
+    display: flex;
+    gap: 60px;
+  }
+
+  &__left {
+    width: 50%;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
   &__title {
     position: relative;
     color: var(--light-color);
@@ -32,12 +46,26 @@
     z-index: 3;
   }
 
+  &__forminner {
+    width: 100%;
+    padding: 40px 50px;
+    border: 2px solid var(--accent);
+    border-radius: 15px;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__call {
+    font-size: 32px;
+    color: var(--light-color);
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid var(--border);
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    position: relative;
-    z-index: 3;
   }
 }
 
@@ -46,33 +74,47 @@
     padding: 0 20px;
     margin-bottom: 15px;
     height: 54px;
-    background-color: var(--gray-bg);
-    border-radius: 6px;
-    border: none;
+    color: var(--light-color);
+    background-color: transparent;
+    border-radius: 15px;
+    border: 1px solid var(--border);
     font-size: 14px;
     outline: none;
   }
+
+  & input:focus {
+    border: 1px solid var(--accent);
+  }
+
   &__text {
     height: 200px;
-    border-radius: 6px;
-    background-color: var(--gray-bg);
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    background-color: transparent;
     padding: 15px;
     font-size: 14px;
-    color: var(--text-dark);
+    color: var(--light-color);
     outline: none;
     resize: none;
     margin-bottom: 40px;
   }
+
+  &__text:focus {
+    border: 1px solid var(--accent);
+  }
+
   &__btn {
     padding: 18px;
     font-size: 20px !important;
     font-weight: 700;
     color: var(--text-light);
-    background-color: #998675 !important;
-    transition: all .3s;
+    background-color: var(--accent) !important;
+    color: var(--text-dark) !important;
+    border-radius: 30px !important;
+    transition: all 0.3s;
     &:hover {
-      background-color: #463d35 !important;
-      color: var(--accent);
+      background-color: var(--light-color) !important;
+      // color: var(--accent) !important;
     }
   }
 }
