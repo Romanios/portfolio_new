@@ -1,0 +1,78 @@
+.contacts {
+  background-color: #fff;
+  padding: 120px 0;
+  background-image: url("./../../img/consulting__bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
+  &__title {
+    position: relative;
+    color: var(--light-color);
+    z-index: 3;
+  }
+
+  &__offer {
+    margin-bottom: 40px;
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.feed-form {
+  & input {
+    padding: 0 20px;
+    margin-bottom: 15px;
+    height: 54px;
+    background-color: var(--gray-bg);
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+  }
+  &__text {
+    height: 200px;
+    border-radius: 6px;
+    background-color: var(--gray-bg);
+    padding: 15px;
+    font-size: 14px;
+    color: var(--text-dark);
+    outline: none;
+    resize: none;
+    margin-bottom: 40px;
+  }
+  &__btn {
+    padding: 18px;
+    font-size: 20px !important;
+    font-weight: 700;
+    color: var(--text-light);
+    background-color: #998675 !important;
+    transition: all .3s;
+    &:hover {
+      background-color: #463d35 !important;
+      color: var(--accent);
+    }
+  }
+}

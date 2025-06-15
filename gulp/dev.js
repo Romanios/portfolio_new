@@ -107,9 +107,9 @@ gulp.task('sprite:dev', function() {
 
 gulp.task('files:dev', function () {
 	return gulp
-		.src('./src/files/**/*')
-		.pipe(changed('./build/files/'))
-		.pipe(gulp.dest('./build/files/'));
+		.src('./src/**/*')
+		.pipe(changed('./build/'))
+		.pipe(gulp.dest('./build/'));
 });
 
 gulp.task('js:dev', function () {

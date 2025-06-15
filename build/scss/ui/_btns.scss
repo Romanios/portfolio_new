@@ -1,0 +1,86 @@
+.hover-fill-btn {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  &.hover-fill-btn-mode {
+    background: var(--accent);
+    color: var(--header);
+  }
+}
+
+.hover-fill-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+  transition: width 0.4s ease;
+  z-index: 0;
+  &.hover-fill-btn-mode::before {
+    color: var(--header);
+  }
+}
+
+.hover-fill-btn:hover::before {
+  width: 100%;
+}
+
+.hover-fill-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.hover-fill-btn:hover {
+  color: var(--accent);
+}
+
+.main-btn {
+  position: relative;
+  color: var(--accent);
+  padding: 10px 60px 10px 25px;
+  border: 1px solid var(--accent);
+  border-radius: 24px;
+  overflow: hidden;
+  &.hover-fill-btn-mode {
+    color: var(--header);
+    padding: 20px 60px 20px 30px;
+    font-weight: 600;
+    border-radius: 30px;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    background-image: url(../img/icons/arrow-up-light.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 16px;
+    top: 18%;
+    transform: rotate(45deg);
+    transition: all 0.4s ease-in;
+  }
+
+  &.hover-fill-btn-mode::after {
+    background-image: url(../img/icons/arrow-up-dark.svg);
+    right: 24px;
+    top: 30%;
+  }
+
+  &:hover {
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}

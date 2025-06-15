@@ -1,0 +1,120 @@
+
+.service {
+  background-color: #fff;
+  padding: 120px 0;
+  &__present {
+    margin-bottom: 10px;
+  }
+
+  &__present-img {
+  }
+
+  &__present-title {
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-family: "Manrope", sans-serif;
+    color: var(--header);
+    text-transform: capitalize;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.16;
+    text-align: center;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    grid-template-rows: auto auto; /* 2 ряда */
+    gap: 25px; /* отступы */
+  }
+
+  &__card {
+    padding: 30px;
+    border: 1px solid #d5d5d5;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    &:hover {
+
+    }
+  }
+
+  &__card.item3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+
+  &__img {
+    width: 30px;
+    height: 30px;
+    fill: var(--accent);
+    transition: all 0.3s;
+  }
+
+  &__card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--header);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__card-text {
+
+  }
+}
+
+.service__card:hover .service__icon {
+  background-color: var(--accent);
+}
+
+.service__card:hover .service__img {
+  fill: var(--header);
+}
+
+.item1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Второй элемент - верхний правый */
+.item2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* Третий (центральный) элемент - занимает второй ряд и первый, т.е. оба ряда */
+.item3 {
+  grid-column: 2;
+  grid-row: 1 / span 2; /* занимает два ряда */
+}
+
+/* Четвертый элемент - нижний левый */
+.item4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Пятый элемент - нижний правый */
+.item5 {
+  grid-column: 3;
+  grid-row: 2;
+}

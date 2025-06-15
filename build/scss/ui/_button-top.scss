@@ -1,0 +1,29 @@
+#scrollToTop {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000;
+  transition: all .3s;
+  &:hover {
+    box-shadow: 0px 0px 20px 0px rgba(1, 189, 79, 0.52);
+  }
+}
+
+#scrollToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}

@@ -128,9 +128,9 @@ gulp.task('sprite:docs', function() {
 
 gulp.task('files:docs', function () {
 	return gulp
-		.src('./src/files/**/*')
-		.pipe(changed('./docs/files/'))
-		.pipe(gulp.dest('./docs/files/'));
+		.src('./src/**/*')
+		.pipe(changed('./docs/'))
+		.pipe(gulp.dest('./docs/'));
 });
 
 gulp.task('js:docs', function () {
