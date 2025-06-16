@@ -1,32 +1,38 @@
 function exampleMobile() {
-  const tabHeaders = document.querySelectorAll("[data-tab]");
-  const contentBoxes = document.querySelectorAll("[data-tab-content]");
+const tabHeaders = document.querySelectorAll("[data-tab]");
+const contentBoxes = document.querySelectorAll("[data-tab-content]");
+let activeTab = null; // отслеживает активный таб
 
-  tabHeaders.forEach(function (item) {
-    item.addEventListener("click", function () {
-      contentBoxes.forEach(function (item) {
-        item.classList.add("tab-content-hidden");
-      });
+tabHeaders.forEach(function (tab) {
+  tab.addEventListener("click", function () {
+    const targetId = this.dataset.tab;
+    const contentBox = document.querySelector("#" + targetId);
 
-      const contentBox = document.querySelector("#" + this.dataset.tab);
-      contentBox.classList.remove("tab-content-hidden");
+    // Если повторный клик по уже активной вкладке — скрываем контент
+    if (activeTab === targetId) {
+      contentBox.classList.add("tab-content-hidden");
+      activeTab = null;
+      tab.classList.remove("pressed"); // если используешь класс pressed
+      return;
+    }
+
+    // Скрываем все контент-боксы
+    contentBoxes.forEach(function (box) {
+      box.classList.add("tab-content-hidden");
     });
+
+    // Показываем нужный
+    contentBox.classList.remove("tab-content-hidden");
+
+    // Обновляем активный таб
+    activeTab = targetId;
+
+    // Класс нажатия для кнопок (если нужно)
+    tabHeaders.forEach(function (t) {
+      t.classList.remove("pressed");
+    });
+    tab.classList.add("pressed");
   });
-
-  const items = document.querySelectorAll(".example__btn");
-
-  for (let i = 0; i < items.length; i++) {
-    const item = items[i];
-
-    item.addEventListener("click", () => {
-      for (let i = 0; i < items.length; i++) {
-        const item = items[i];
-        item.classList.remove("pressed");
-      }
-
-      item.classList.add("pressed");
-    });
-  }
+});
 }
-
 export default exampleMobile;

@@ -27,3 +27,7 @@ advantadesAccordion();
 // InputMask
 import InputMask from './modules/tel-mask';
 InputMask();
+
+// Joke
+import jokeProgram from './modules/joke';
+jokeProgram();

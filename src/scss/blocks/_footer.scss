@@ -1,14 +1,137 @@
 .footer {
-	background-color: rgb(62, 62, 62);
-	padding: 50px 0;
-	font-size: 32px;
-    color: #fff;
+  background-color: var(--main-bg);
+  padding: 50px 0;
+  // font-size: 32px;
+  color: #fff;
 
-	h1 {
-		font-size: 32px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+		padding-bottom: 20px;
+  }
+
+  &__initial {
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__logo-link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--text-light);
+  }
+
+  &__logo-text {
+    & span {
+      text-transform: capitalize;
+      font-size: 26px;
+      line-height: 1.4;
+    }
+  }
+
+  &__slogan {
+  }
+
+  &__menu {
+  }
+
+  &__nav-list {
+  }
+
+  &__nav-item {
+		margin-bottom: 5px;
+  }
+
+  &__nav-link {
+		display: inline-block;
+		padding: 5px 0;
+		color: var(--text-light);
+		position: relative;
+		transition: all .3s;
+		&:hover {
+			color: var(--accent);
+		}
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: var(--accent);
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			visibility: hidden;
+			opacity: 0;
+			transition: all .5s;
+		}
+		&:hover::before {
+			// width: 100%;
+			visibility: visible;
+			opacity: 1;
+		}
+  }
+
+  &__social {
+  }
+
+  &__social-list {
+		display: flex;
+		gap: 20px;
+  }
+
+  &__social-item {
+  }
+
+  &__icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d2e30;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    &:hover {
+      background-color: var(--accent);
+    }
+  }
+
+  &__icon-img {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    transition: all 0.3s;
+  }
+
+  &__joke {
+		width: 25%;
+		line-height: 1.4;
+		border: 1px solid var(--border);
+		border-radius: 15px;
+		color: var(--text-light);
+		padding: 20px;
+  }
+
+	&__joke-title {
+		color: #fff;
+		font-weight: 500;
+		text-align: center;
+		margin-bottom: 10px;
+		font-size: 18px;
 	}
 
-	@media (max-width: 1200px) {
-		font-size: 26px;
-	}
+  &__copyright {
+		padding-top: 20px;
+		border-top: 1px solid var(--border);
+		text-align: center;
+  }
+}
+
+
+.footer__icon-link:hover .footer__icon-img {
+  fill: black;
 }
